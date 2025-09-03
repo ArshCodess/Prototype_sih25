@@ -51,25 +51,25 @@ export const Dashboard: React.FC<DashboardProps> = ({ userProfile, onNavigate })
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       <Navigation currentPage="dashboard" onNavigate={onNavigate} userProfile={userProfile} />
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-12">
+      <div className="sm:max-w-7xl max-w-5xl sm:mx-auto sm:px-6 px-4 lg:px-8 sm:pt-24 pt-20 sm:pb-12 pb-10">
         {/* Welcome Section */}
         <div className="mb-12">
-          <h1 className="text-4xl lg:text-5xl font-poppins font-bold text-white mb-4">
+          <h1 className="sm:text-4xl text-3xl lg:text-5xl font-poppins font-bold text-white mb-4">
             Welcome back, <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">{userProfile.name}</span>
           </h1>
-          <p className="text-xl text-gray-300">Here's your personalized career guidance dashboard</p>
+          <p className="sm:text-xl text-base text-gray-300">Here's your personalized career guidance dashboard</p>
         </div>
 
         {/* Main Dashboard Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 sm:gap-8 gap-4">
           {/* Left Column - Primary Cards */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="-translate-x-1 sm:translate-x-0 lg:col-span-2 sm:space-y-8">
             {/* Recommended Streams */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="flex items-center space-x-4 mb-6">
+            <div className="scale-90 sm:scale-100 bg-white/10 backdrop-blur-md rounded-3xl sm:p-8 p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div className="flex items-center space-x-4 sm:mb-6 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
@@ -97,7 +97,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ userProfile, onNavigate })
             </div>
 
             {/* Career Pathways */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="scale-90 sm:scale-100 bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-white" />
@@ -141,7 +141,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ userProfile, onNavigate })
           {/* Right Column - Secondary Cards */}
           <div className="space-y-8">
             {/* Nearby Colleges */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="scale-90 sm:scale-100 bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-white" />
@@ -169,7 +169,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ userProfile, onNavigate })
             </div>
 
             {/* Timeline Tracker */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="scale-90 sm:scale-100 bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <Calendar className="w-5 h-5 text-white" />
@@ -200,7 +200,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ userProfile, onNavigate })
             </div>
 
             {/* Quick Stats */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20">
+            <div className="scale-90 sm:scale-100 bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20">
               <h3 className="text-xl font-poppins font-semibold text-white mb-4">Your Progress</h3>
               
               <div className="space-y-4">

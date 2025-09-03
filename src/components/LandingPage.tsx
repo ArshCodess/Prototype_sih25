@@ -16,17 +16,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 p-6 lg:p-8">
+      <nav className="relative z-10 mdp-6 p-4 lg:p-8">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Globe className="w-6 h-6 text-white" />
+            <div className="md:w-10 md:h-10 w-7 h-7 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <Globe className="md:w-6 w-5 h-5 md:h-6 text-white" />
             </div>
-            <span className="text-2xl font-poppins font-bold text-white">FuturePathAI</span>
+            <span className="md:text-2xl text-lg font-poppins font-bold text-white">FuturePathAI</span>
           </div>
           <button 
             onClick={() => onNavigate('onboarding')}
-            className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+            className="px-6 py-3 md:scale-100 scale-[.85] bg-gradient-to-r from-blue-500 to-cyan-500 text-sm text-white md:text-base md:font-medium rounded-full hover:shadow-lg text-nowrap hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
           >
             Get Started
           </button>
@@ -36,13 +36,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
       {/* Hero Section */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-16 lg:pt-24 pb-24">
         <div className="text-center">
-          <h1 className="text-5xl lg:text-7xl font-poppins font-bold text-white mb-8 leading-tight">
+          <h1 className="md:text-5xl text-4xl lg:text-7xl font-poppins font-bold text-white mb-8 leading-tight">
             Your Personalized
             <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Career Navigator
             </span>
           </h1>
-          <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="md:text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Discover your perfect career path with AI-powered recommendations, explore government colleges, 
             and make informed decisions about your future with personalized guidance.
           </p>
