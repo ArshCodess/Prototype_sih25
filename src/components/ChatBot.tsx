@@ -129,7 +129,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onToggle, userProfile 
   }
 
   return (
-    <div className="fixed bottom-6 right-6 ms:w-96 w-[19.5rem] h-[600px] bg-slate-900/95 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl z-50 flex flex-col overflow-hidden">
+    <div className="fixed bottom-6 right-6 sm:w-96 w-[19.5rem] h-[600px] bg-slate-900/95 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl z-50 flex flex-col overflow-hidden">
       {/* Header */}
       <div className="p-6 border-b border-white/10 bg-gradient-to-r from-blue-500/20 to-cyan-500/20">
         <div className="flex items-center justify-between">
