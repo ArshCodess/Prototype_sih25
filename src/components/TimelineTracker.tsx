@@ -143,7 +143,7 @@ export const TimelineTracker: React.FC<TimelineTrackerProps> = ({ userProfile, o
                     className="px-4 py-2 bg-white/5 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {months.map((month, index) => (
-                      <option key={index} value={index}>{month}</option>
+                      <option className='text-black' key={index} value={index}>{month}</option>
                     ))}
                   </select>
                   <select
@@ -151,9 +151,9 @@ export const TimelineTracker: React.FC<TimelineTrackerProps> = ({ userProfile, o
                     onChange={(e) => setSelectedYear(parseInt(e.target.value))}
                     className="px-4 py-2 bg-white/5 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
-                    <option value={2025}>2025</option>
-                    <option value={2026}>2026</option>
-                    <option value={2027}>2027</option>
+                    <option className='text-black' value={2025}>2025</option>
+                    <option className='text-black' value={2026}>2026</option>
+                    <option className='text-black' value={2027}>2027</option>
                   </select>
                 </div>
               </div>

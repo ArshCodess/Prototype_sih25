@@ -117,10 +117,10 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
                     onChange={(e) => updateProfile({ gender: e.target.value as 'male' | 'female' | 'other' })}
                     className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                   >
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
+                    <option className='text-black' value="">Select Gender</option>
+                    <option className='text-black' value="male">Male</option>
+                    <option className='text-black' value="female">Female</option>
+                    <option className='text-black' value="other">Other</option>
                   </select>
                 </div>
               </div>
@@ -185,17 +185,17 @@ export const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
                     onChange={(e) => updateProfile({ state: e.target.value })}
                     className="w-full px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
                   >
-                    <option value="">Select State</option>
-                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Tamil Nadu">Tamil Nadu</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="West Bengal">West Bengal</option>
-                    <option value="Uttar Pradesh">Uttar Pradesh</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Rajasthan">Rajasthan</option>
-                    <option value="Punjab">Punjab</option>
+                    <option className='text-black' value="">Select State</option>
+                    <option className='text-black' value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option className='text-black' value="Karnataka">Karnataka</option>
+                    <option className='text-black' value="Tamil Nadu">Tamil Nadu</option>
+                    <option className='text-black' value="Maharashtra">Maharashtra</option>
+                    <option className='text-black' value="Delhi">Delhi</option>
+                    <option className='text-black' value="West Bengal">West Bengal</option>
+                    <option className='text-black' value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option className='text-black' value="Gujarat">Gujarat</option>
+                    <option className='text-black' value="Rajasthan">Rajasthan</option>
+                    <option className='text-black' value="Punjab">Punjab</option>
                   </select>
                 </div>
               </div>

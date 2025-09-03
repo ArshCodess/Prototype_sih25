@@ -28,7 +28,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentPage, onNavigate,
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <Globe className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-poppins font-bold text-white">FuturePathAI</span>
+            <span className="text-xl font-poppins font-bold text-white">CareerPathAI</span>
           </div>
 
           {/* Desktop Navigation */}
