@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, Send, X, Bot, User, Lightbulb, BookOpen, MapPin, TrendingUp } from 'lucide-react';
+import { MessageCircle, Send, X, Bot } from 'lucide-react';
 import { UserProfile } from '../types/user';
 
 interface ChatBotProps {
@@ -129,7 +129,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onToggle, userProfile 
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-96 h-[600px] bg-slate-900/95 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl z-50 flex flex-col overflow-hidden">
+    <div className="fixed bottom-6 right-6 ms:w-96 w-[19.5rem] h-[600px] bg-slate-900/95 backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl z-50 flex flex-col overflow-hidden">
       {/* Header */}
       <div className="p-6 border-b border-white/10 bg-gradient-to-r from-blue-500/20 to-cyan-500/20">
         <div className="flex items-center justify-between">
@@ -139,7 +139,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onToggle, userProfile 
             </div>
             <div>
               <h3 className="font-poppins font-semibold text-white">AI Career Advisor</h3>
-              <p className="text-sm text-gray-300">Online • Ready to help</p>
+              <p className="text-sm text-gray-300">Online <a className='text-green-600'>•</a> Ready to help</p>
             </div>
           </div>
           <button
@@ -165,7 +165,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onToggle, userProfile 
                   <Bot className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                 )}
                 <div className="flex-1">
-                  <p className="text-sm leading-relaxed whitespace-pre-line">{message.text}</p>
+                  <p className="sm:text-sm text-xs leading-relaxed whitespace-pre-line">{message.text}</p>
                   <span className="text-xs opacity-70 mt-2 block">
                     {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </span>
@@ -178,7 +178,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onToggle, userProfile 
                     <button
                       key={index}
                       onClick={() => handleSuggestionClick(suggestion)}
-                      className="block w-full text-left p-2 bg-white/10 rounded-lg text-sm text-blue-300 hover:bg-white/20 transition-all duration-300"
+                      className="block w-full text-left p-2 bg-white/10 rounded-lg sm:text-sm text-xs text-blue-300 hover:bg-white/20 transition-all duration-300"
                     >
                       {suggestion}
                     </button>
@@ -215,7 +215,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ isOpen, onToggle, userProfile 
             onChange={(e) => setInputText(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
             placeholder="Ask me anything about careers..."
-            className="flex-1 px-4 py-3 bg-white/5 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+            className="flex-1 px-4 py-3 bg-white/5 border sm:text-base text-xs border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
           />
           <button
             onClick={() => handleSendMessage()}

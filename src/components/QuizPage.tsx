@@ -157,24 +157,24 @@ export const QuizPage: React.FC<QuizPageProps> = ({ userProfile, onNavigate }) =
         
         <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-24 pb-12">
           <div className="text-center mb-12">
-            <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-10 h-10 text-white" />
+            <div className="sm:w-20 h-16 w-16 sm:h-20 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="sm:w-10 w-8 h-8 sm:h-10 text-white" />
             </div>
-            <h1 className="text-4xl font-poppins font-bold text-white mb-4">Quiz Complete!</h1>
-            <p className="text-xl text-gray-300">Here are your personalized recommendations</p>
+            <h1 className="sm:text-4xl text-2xl font-poppins font-bold text-white mb-4">Quiz Complete!</h1>
+            <p className="sm:text-xl text-gray-300">Here are your personalized recommendations</p>
           </div>
 
           {/* Results Cards */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Primary Recommendation */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 col-span-full">
-              <h2 className="text-2xl font-poppins font-semibold text-white mb-4">Recommended Stream</h2>
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl sm:p-8 p-6 border border-white/20 col-span-full">
+              <h2 className="sm:text-2xl text-xl font-poppins font-semibold text-white mb-4">Recommended Stream</h2>
               <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30 mb-4">
-                <h3 className="text-3xl font-bold text-blue-400 mb-2">{recommendation.primary}</h3>
-                <p className="text-gray-300 mb-4">{recommendation.description}</p>
+                <h3 className="sm:text-3xl text-2xl font-bold text-blue-400 mb-2">{recommendation.primary}</h3>
+                <p className="text-gray-300 mb-4 sm:text-base text-sm">{recommendation.description}</p>
                 <div className="mb-4">
-                  <h4 className="font-semibold text-white mb-2">Suggested Subjects:</h4>
-                  <p className="text-blue-300">{recommendation.subjects}</p>
+                  <h4 className="font-semibold sm:text-base text-sm text-white mb-2">Suggested Subjects:</h4>
+                  <p className="text-blue-300 sm:text-base text-sm">{recommendation.subjects}</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-white mb-2">Career Opportunities:</h4>
@@ -266,16 +266,16 @@ export const QuizPage: React.FC<QuizPageProps> = ({ userProfile, onNavigate }) =
           </div>
 
           {/* Action Buttons */}
-          <div className="flex justify-center space-x-4 mt-8">
+          <div className="flex justify-center space-x-4 my-8 ">
             <button 
               onClick={() => onNavigate('dashboard')}
-              className="px-8 py-3 bg-white/10 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
+              className="sm:px-8 sm:py-3 px-4 text-sm text-nowrap py-3 bg-white/10 text-white font-medium rounded-full hover:bg-white/20 transition-all duration-300"
             >
               Back to Dashboard
             </button>
             <button 
               onClick={() => window.location.reload()}
-              className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+              className="sm:px-8 px-5 py-3 text-sm sm:py-3 text-nowrap bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
             >
               Retake Quiz
             </button>
@@ -292,11 +292,11 @@ export const QuizPage: React.FC<QuizPageProps> = ({ userProfile, onNavigate }) =
       <div className="max-w-4xl mx-auto px-6 lg:px-8 pt-24 pb-12">
         {/* Quiz Header */}
         <div className="text-center mb-12">
-          <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Brain className="w-10 h-10 text-white" />
+          <div className="sm:w-20 w-16 h-16 sm:h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Brain className="sm:w-10 w-8 h-8 sm:h-10 text-white" />
           </div>
-          <h1 className="text-4xl font-poppins font-bold text-white mb-4">Career Aptitude Quiz</h1>
-          <p className="text-xl text-gray-300 mb-6">Discover your ideal career path through our AI-powered assessment</p>
+          <h1 className="sm:text-4xl text-2xl font-poppins font-bold text-white mb-4">Career Aptitude Quiz</h1>
+          <p className="sm:text-xl text-base text-gray-300 mb-6">Discover your ideal career path through our AI-powered assessment</p>
           
           {/* Progress and Timer */}
           <div className="flex justify-between items-center max-w-2xl mx-auto">
@@ -319,7 +319,7 @@ export const QuizPage: React.FC<QuizPageProps> = ({ userProfile, onNavigate }) =
 
         {/* Question Card */}
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 max-w-3xl mx-auto">
-          <h2 className="text-2xl font-poppins font-semibold text-white mb-8 text-center">
+          <h2 className="sm:text-2xl text-xl font-poppins font-semibold text-white mb-8 text-center">
             {questions[currentQuestion].question}
           </h2>
           
@@ -328,13 +328,13 @@ export const QuizPage: React.FC<QuizPageProps> = ({ userProfile, onNavigate }) =
               <button
                 key={index}
                 onClick={() => handleAnswer(index)}
-                className="w-full p-6 bg-white/5 border border-white/20 rounded-xl text-left text-white hover:bg-white/10 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 group"
+                className="w-full sm:p-6 p-4 bg-white/5 border border-white/20 rounded-xl text-left text-white hover:bg-white/10 hover:border-blue-400 transition-all duration-300 transform hover:scale-105 group"
               >
                 <div className="flex items-center space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold group-hover:scale-110 transition-transform duration-300">
+                  <div className="sm:w-8 w-7 h-7 sm:h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold group-hover:scale-110 transition-transform duration-300">
                     {String.fromCharCode(65 + index)}
                   </div>
-                  <span className="text-lg">{option}</span>
+                  <span className="sm:text-lg text-sm">{option}</span>
                 </div>
               </button>
             ))}
