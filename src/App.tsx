@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className={`min-h-screen bg-slate-900 font-inter relative`}>
-      <div className={`${isChatOpen?'blur-sm':""}`}>{renderCurrentPage()}</div>
+      <div className={`${isChatOpen?'':""}`}>{renderCurrentPage()}</div>
       {userProfile && (
         <ChatBot
           isOpen={isChatOpen}
